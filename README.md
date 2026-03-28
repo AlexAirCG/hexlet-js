@@ -1,6 +1,11 @@
 # hexlet-js
 
-# Makfile
+# nodejs-package
 
-Команда make setup запускает команды
-install: npm install
+[![lodash](https://img.shields.io)](https://lodash.com)
+
+## Setup
+
+```bash
+make install
+```
