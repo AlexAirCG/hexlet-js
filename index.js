@@ -1,5 +1,3 @@
-import _ from "lodash";
+import getLastItem from "./src/index.js";
 
-console.log("Hello, Hexlet!");
-
-console.log(_.last(["one", "two"]));
+getLastItem(["one", "two", "three"]);
