@@ -7,3 +7,17 @@
 ```bash
 make install
 ```
+
+## Description
+
+Boilerplate for javascript projects with:
+
+- Javascript (nodejs)
+- Eslint
+
+## Eslint
+
+```bash
+make lint
+make lint-fix
+```
