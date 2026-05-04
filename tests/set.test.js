@@ -1,15 +1,19 @@
-import set from "../src/set.js";
+import set from '../src/set.js'
+import { strict as assert } from 'node:assert'
 
-const obj = {};
+const obj = {}
 
-set(obj, "key1", "value1");
-if (obj.key1 !== "value1") {
-  throw new Error("Функция работает неверно!");
-}
+set(obj, 'key', 'value')
+assert.strictEqual(obj.key, 'value', 'значение должно быть "value"')
 
-set(obj, "key1", "next value");
-if (obj.key1 === "next value") {
-  throw new Error("Функция работает неверно!");
-}
+set(obj, 'key', 'next value')
+assert.notStrictEqual(
+  obj.key,
+  'next value',
+  'значение НЕ должно было обновиться',
+)
+assert.strictEqual(obj.key, 'value', 'значение должно остаться старым')
 
-console.log("Все тесты пройдены!");
+assert.deepStrictEqual(obj, { key: 'value' })
+
+console.log('Все тесты пройдены!')
